@@ -27,6 +27,5 @@ publish:
     - docker
     - gitlab
   script:
-    - echo "$NPM_TOKEN"
-    - yarn config set -- '//registry.npmjs.org/:_authToken=$NPM_TOKEN'
+    - yarn config set '//registry.npmjs.org/:_authToken' '$NPM_TOKEN'
     - yarn publish
