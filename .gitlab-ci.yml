@@ -12,5 +12,4 @@ publish:
     - gitlab
   script:
     - yarn
-    - yarn build
     - yarn publish --non-interactive
