@@ -1,0 +1,30 @@
+stages:
+  - build
+  - publish
+
+build:
+  stage: build
+  image: node:lts-alpine
+  cache:
+    paths:
+      - node_modules/
+  tags:
+    - docker
+    - gitlab
+  script:
+    - yarn
+    - yarn build
+  artifacts:
+    name: '$CI_PROJECT_NAME-$CI_COMMIT_SHORT_SHA'
+    paths:
+      - dist/
+    expire_in: 1 day
+
+publish:
+  stage: publish
+  image: node:lts-alpine
+  tags:
+    - docker
+    - gitlab
+  script:
+    - npm publish
