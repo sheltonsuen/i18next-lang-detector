@@ -1,6 +1,5 @@
 # I18next Language Detector
-![pipeline](https://gitlab.com/%{project_path}/badges/%{default_branch}/pipeline.svg)
-Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.
+![pipeline](https://gitlab.deepstudy.tech/deepstudy/i18next-lang-detector/badges/master/pipeline.svg)
 
 > This TSDX setup is meant for developing libraries (not apps!) that can be published to NPM. If you’re looking to build a Node app, you could use `ts-node-dev`, plain `ts-node`, or simple `tsc`.
 
