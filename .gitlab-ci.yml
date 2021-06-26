@@ -17,7 +17,7 @@ build:
     - yarn build
 
 
-test:
+unit_test:
   stage: test
   image: node:lts-alpine
   cache:
@@ -30,7 +30,7 @@ test:
     - yarn
     - yarn test
 
-publish:
+npm_registry:
   stage: publish
   image: node:lts-alpine
   cache:
