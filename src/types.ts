@@ -10,7 +10,7 @@ export type DetectorOptions = {
   order: string[];
   lookupQuerystring: string;
   lookupCookie: string;
-  lookupLocalStorage: string;
+  lookupLocalStorage?: string;
   lookupSessionStorage: string;
 };
 
