@@ -7,3 +7,6 @@
 </p>
 
 This is a rewrite of the i18next-browser-languagedetector
+
+## Differences
+* No cache implemented, since I think cache is not part of a detector
