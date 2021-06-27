@@ -2,8 +2,6 @@ import path from '../path';
 import { DetectorOptions } from '../../types';
 
 const DEFAULT_DETECTOR_OPTIONS: DetectorOptions = {
-  caches: [],
-  excludeCacheFor: [],
   lookupCookie: '',
   lookupFromPathIndex: 0,
   lookupFromUrlIndex: 0,
