@@ -19,5 +19,5 @@ export type I18nextOptions = {};
 
 export type Detector = {
   name: string;
-  lookup: (options: DetectorOptions) => string | undefined;
+  lookup: (options: DetectorOptions) => string[] | string | undefined;
 };

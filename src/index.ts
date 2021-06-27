@@ -54,7 +54,8 @@ class LanguageDetector {
     const detectedLangs = this.detectorOptions.order.reduce<string[]>(
       (langs, detectorName) => {
         const lang = this.detectors[detectorName]?.lookup(this.detectorOptions);
-        return lang ? [...langs, lang] : langs;
+        const detectedLangs = typeof lang === 'string' ? [lang] : lang;
+        return detectedLangs ? [...langs, ...detectedLangs] : langs;
       },
       []
     );
