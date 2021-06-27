@@ -4,6 +4,7 @@ import path from './detectors/path';
 const DEFAULT_OPTIONS: DetectorOptions = {
   lookupFromPathIndex: 0,
   lookupFromUrlIndex: 0,
+  lookupFromSubdomainIndex: 0,
   order: [
     'querystring',
     'cookie',

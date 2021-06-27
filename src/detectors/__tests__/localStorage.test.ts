@@ -2,13 +2,14 @@ import LocalStorageDetector from '../localStorage';
 import { DetectorOptions } from '../../types';
 
 const DEFAULT_DETECTOR_OPTIONS: DetectorOptions = {
+  lookupFromSubdomainIndex: 0,
   lookupCookie: '',
   lookupFromPathIndex: 0,
   lookupFromUrlIndex: 0,
   lookupLocalStorage: 'i18nextLng',
   lookupQuerystring: '',
   lookupSessionStorage: '',
-  order: [],
+  order: []
 };
 
 test('should return language when match', () => {

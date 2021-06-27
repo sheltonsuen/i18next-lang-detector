@@ -2,13 +2,14 @@ import { DetectorOptions } from '../../types';
 import QueryStringDetector from '../queryString';
 
 const DEFAULT_DETECTOR_OPTIONS: DetectorOptions = {
+  lookupFromSubdomainIndex: 0,
   lookupCookie: '',
   lookupFromPathIndex: 0,
   lookupFromUrlIndex: 0,
   lookupLocalStorage: '',
   lookupQuerystring: 'lang',
   lookupSessionStorage: '',
-  order: [],
+  order: []
 };
 
 test('should return lang when match', () => {

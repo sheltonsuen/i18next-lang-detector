@@ -4,7 +4,7 @@ import { isLocalStorageAvailable } from '../utils';
 const LocalStorageDetector: Detector = {
   name: 'localStorage',
   lookup(options) {
-    if (!options.lookupLocalStorage || !isLocalStorageAvailable()) {
+    if (!isLocalStorageAvailable()) {
       return undefined;
     }
 

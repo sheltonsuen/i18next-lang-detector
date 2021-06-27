@@ -10,8 +10,9 @@ export type DetectorOptions = {
   order: string[];
   lookupQuerystring: string;
   lookupCookie: string;
-  lookupLocalStorage?: string;
-  lookupSessionStorage?: string;
+  lookupLocalStorage: string;
+  lookupSessionStorage: string;
+  lookupFromSubdomainIndex: number;
 };
 
 export type I18nextOptions = {};

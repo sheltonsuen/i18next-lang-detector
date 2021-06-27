@@ -2,13 +2,14 @@ import { DetectorOptions } from '../../types';
 import SessionStorageDetector from '../sessionStorage';
 
 const DEFAULT_DETECTOR_OPTIONS: DetectorOptions = {
+  lookupFromSubdomainIndex: 0,
   lookupCookie: '',
   lookupFromPathIndex: 0,
   lookupFromUrlIndex: 0,
   lookupLocalStorage: '',
   lookupQuerystring: '',
   lookupSessionStorage: 'lang',
-  order: [],
+  order: []
 };
 
 test('should return language when match', () => {

@@ -4,7 +4,7 @@ import { isSessionStorageAvailable } from '../utils';
 const SessionStorageDetector: Detector = {
   name: 'sessionStorage',
   lookup(options) {
-    if (!options.lookupSessionStorage || !isSessionStorageAvailable()) {
+    if (!isSessionStorageAvailable()) {
       return undefined;
     }
 
