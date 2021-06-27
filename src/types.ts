@@ -11,7 +11,7 @@ export type DetectorOptions = {
   lookupQuerystring: string;
   lookupCookie: string;
   lookupLocalStorage?: string;
-  lookupSessionStorage: string;
+  lookupSessionStorage?: string;
 };
 
 export type I18nextOptions = {};

@@ -11,3 +11,17 @@ export const isLocalStorageAvailable = (): boolean => {
     }
     return true
 }
+
+export const isSessionStorageAvailable = (): boolean => {
+    if (!window?.sessionStorage) {
+        return false
+    }
+
+    try {
+        window.sessionStorage.setItem('foo.bar', 'foo')
+        window.sessionStorage.removeItem('foo.bar')
+    } catch (e) {
+        return false
+    }
+    return true
+}
