@@ -79,6 +79,10 @@ class LanguageDetector {
     }
     return detectedLangs[0];
   }
+
+  cacheUserLanguage() {
+    // avoid crash, I will not implement it right now
+  }
 }
 
 LanguageDetector.type = 'languageDetector';
