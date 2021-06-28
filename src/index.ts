@@ -1,5 +1,12 @@
 import { Detector, DetectorOptions, Services } from './types';
-import path from './detectors/path';
+import PathDetector from './detectors/path';
+import CookieDetector from './detectors/cookie';
+import HtmlTagDetector from './detectors/htmlTag';
+import LocalStorageDetector from './detectors/localStorage';
+import NavigatorDetector from './detectors/navigator';
+import QueryStringDetector from './detectors/queryString';
+import SessionStorageDetector from './detectors/sessionStorage';
+import SubDomainDetector from './detectors/subDomain';
 
 const DEFAULT_OPTIONS: DetectorOptions = {
   lookupFromPathIndex: 0,
@@ -43,7 +50,14 @@ class LanguageDetector {
       this.detectorOptions.lookupFromPathIndex = this.detectorOptions.lookupFromUrlIndex;
     }
 
-    this.addDetector(path);
+    this.addDetector(CookieDetector);
+    this.addDetector(HtmlTagDetector);
+    this.addDetector(LocalStorageDetector);
+    this.addDetector(NavigatorDetector);
+    this.addDetector(PathDetector);
+    this.addDetector(QueryStringDetector);
+    this.addDetector(SessionStorageDetector);
+    this.addDetector(SubDomainDetector);
   }
 
   addDetector(detector: Detector) {
