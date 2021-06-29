@@ -4,6 +4,8 @@
 <p align="center">
     <a href="https://gitlab.deepstudy.tech/deepstudy/i18next-lang-detector" alt="pipeline">
         <img src="https://gitlab.deepstudy.tech/deepstudy/i18next-lang-detector/badges/master/pipeline.svg" /></a>
+    <a href="https://gitlab.deepstudy.tech/deepstudy/i18next-lang-detector" alt="pipeline">
+        <img src="https://gitlab.deepstudy.tech/deepstudy/i18next-lang-detector/badges/master/coverage.svg" /></a>
 </p>
 
 This is a rewrite of the i18next-browser-languagedetector
