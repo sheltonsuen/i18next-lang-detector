@@ -5,3 +5,6 @@ dist
 
 # idea config
 .idea/
+
+# jest coverage
+coverage/

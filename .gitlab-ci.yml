@@ -29,6 +29,9 @@ unit_test:
   script:
     - yarn
     - yarn test
+  artifacts:
+    reports:
+      cobertura: coverage/cobertura-coverage.xml
 
 npm_registry:
   stage: publish
