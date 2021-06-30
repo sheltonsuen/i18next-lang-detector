@@ -29,11 +29,15 @@ const DEFAULT_OPTIONS: DetectorOptions = {
 class LanguageDetector {
   static type: string;
 
-  services: Services;
-  detectorOptions: DetectorOptions;
-  detectors: { [key: string]: Detector };
+  services!: Services;
+  detectorOptions!: DetectorOptions;
+  detectors!: { [key: string]: Detector; };
 
   constructor(services: Services, detectorOptions: DetectorOptions) {
+    this.init(services, detectorOptions);
+  }
+
+  init(services: Services, detectorOptions: DetectorOptions) {
     this.services = services;
     this.detectorOptions = {
       ...DEFAULT_OPTIONS,
@@ -41,15 +45,15 @@ class LanguageDetector {
     };
     this.detectors = {};
 
-    this.init();
-  }
-
-  init() {
     // backwards compatibility
     if (this.detectorOptions.lookupFromUrlIndex) {
       this.detectorOptions.lookupFromPathIndex = this.detectorOptions.lookupFromUrlIndex;
     }
 
+    this.loadDetectors();
+  }
+
+  private loadDetectors() {
     this.addDetector(CookieDetector);
     this.addDetector(HtmlTagDetector);
     this.addDetector(LocalStorageDetector);
