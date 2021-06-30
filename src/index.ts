@@ -31,7 +31,7 @@ class LanguageDetector {
 
   services!: Services;
   detectorOptions!: DetectorOptions;
-  detectors!: { [key: string]: Detector; };
+  detectors!: { [key: string]: Detector };
 
   constructor(services: Services, detectorOptions: DetectorOptions) {
     this.init(services, detectorOptions);
