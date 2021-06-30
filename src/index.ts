@@ -1,30 +1,5 @@
 import { Detector, DetectorOptions, Services } from './types';
-import PathDetector from './detectors/path';
-import CookieDetector from './detectors/cookie';
-import HtmlTagDetector from './detectors/htmlTag';
-import LocalStorageDetector from './detectors/localStorage';
-import NavigatorDetector from './detectors/navigator';
-import QueryStringDetector from './detectors/queryString';
-import SessionStorageDetector from './detectors/sessionStorage';
-import SubDomainDetector from './detectors/subDomain';
-
-const DEFAULT_OPTIONS: DetectorOptions = {
-  lookupFromPathIndex: 0,
-  lookupFromUrlIndex: 0,
-  lookupFromSubdomainIndex: 0,
-  order: [
-    'querystring',
-    'cookie',
-    'localStorage',
-    'sessionStorage',
-    'navigator',
-    'htmlTag',
-  ],
-  lookupQuerystring: 'lng',
-  lookupCookie: 'i18next',
-  lookupLocalStorage: 'i18nextLng',
-  lookupSessionStorage: 'i18nextLng',
-};
+import { DEFAULT_OPTIONS, SUPPORTED_DETECTORS } from './constant';
 
 class LanguageDetector {
   static type: 'languageDetector';
@@ -43,29 +18,12 @@ class LanguageDetector {
       ...DEFAULT_OPTIONS,
       ...detectorOptions,
     };
-    this.detectors = {};
+    this.detectors = SUPPORTED_DETECTORS;
 
     // backwards compatibility
     if (this.detectorOptions.lookupFromUrlIndex) {
       this.detectorOptions.lookupFromPathIndex = this.detectorOptions.lookupFromUrlIndex;
     }
-
-    this.loadDetectors();
-  }
-
-  private loadDetectors() {
-    this.addDetector(CookieDetector);
-    this.addDetector(HtmlTagDetector);
-    this.addDetector(LocalStorageDetector);
-    this.addDetector(NavigatorDetector);
-    this.addDetector(PathDetector);
-    this.addDetector(QueryStringDetector);
-    this.addDetector(SessionStorageDetector);
-    this.addDetector(SubDomainDetector);
-  }
-
-  addDetector(detector: Detector) {
-    this.detectors[detector.name] = detector;
   }
 
   detect() {
