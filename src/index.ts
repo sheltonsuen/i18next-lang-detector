@@ -27,7 +27,7 @@ const DEFAULT_OPTIONS: DetectorOptions = {
 };
 
 class LanguageDetector {
-  static type: string;
+  static type: 'languageDetector';
 
   services!: Services;
   detectorOptions!: DetectorOptions;
