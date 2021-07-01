@@ -8,11 +8,11 @@ class LanguageDetector {
   detectorOptions!: DetectorOptions;
   detectors!: { [key: string]: Detector };
 
-  constructor(services: Services, detectorOptions: DetectorOptions) {
+  constructor(services: Services, detectorOptions?: Partial<DetectorOptions>) {
     this.init(services, detectorOptions);
   }
 
-  init(services: Services, detectorOptions: DetectorOptions) {
+  init(services: Services, detectorOptions?: Partial<DetectorOptions>) {
     this.services = services;
     this.detectorOptions = {
       ...DEFAULT_OPTIONS,
