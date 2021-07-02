@@ -1,5 +1,5 @@
 import { DetectorOptions } from '../../types';
-import SubDomainDetector from '../subDomain';
+import { subDomainDetector } from '../subDomain';
 
 const DEFAULT_DETECTOR_OPTIONS: DetectorOptions = {
   lookupFromSubdomainIndex: 0,
@@ -19,5 +19,5 @@ test('should return language when match', () => {
     },
   });
 
-  expect(SubDomainDetector.lookup(DEFAULT_DETECTOR_OPTIONS)).toBe('en');
+  expect(subDomainDetector.lookup(DEFAULT_DETECTOR_OPTIONS)).toBe('en');
 });

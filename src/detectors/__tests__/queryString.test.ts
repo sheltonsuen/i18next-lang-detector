@@ -1,5 +1,5 @@
 import { DetectorOptions } from '../../types';
-import QueryStringDetector from '../queryString';
+import { queryStringDetector } from '../queryString';
 
 const DEFAULT_DETECTOR_OPTIONS: DetectorOptions = {
   lookupFromSubdomainIndex: 0,
@@ -19,5 +19,5 @@ test('should return lang when match', () => {
     },
   });
 
-  expect(QueryStringDetector.lookup(DEFAULT_DETECTOR_OPTIONS)).toBe('en');
+  expect(queryStringDetector.lookup(DEFAULT_DETECTOR_OPTIONS)).toBe('en');
 });

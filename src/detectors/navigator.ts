@@ -1,6 +1,6 @@
 import { Detector } from '../types';
 
-const NavigatorDetector: Detector = {
+export const navigatorDetector: Detector = {
   name: 'navigator',
   lookup() {
     if (!navigator) return;
@@ -24,5 +24,3 @@ const NavigatorDetector: Detector = {
     return langs.length > 0 ? langs : undefined;
   },
 };
-
-export default NavigatorDetector;

@@ -3,7 +3,7 @@ import { removeProtocol } from '../utils';
 
 const LANG_SUB_DOMAIN_REGEX = /(?:http[s]*:\/\/)*(.*?)\.(?=[^\/]*\..{2,5})/gi;
 
-const SubDomainDetector: Detector = {
+export const subDomainDetector: Detector = {
   name: 'subDomain',
   lookup(options) {
     if (!window?.location) return;
@@ -18,5 +18,3 @@ const SubDomainDetector: Detector = {
     );
   },
 };
-
-export default SubDomainDetector;

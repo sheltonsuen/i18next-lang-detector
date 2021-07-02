@@ -1,12 +1,12 @@
 import { DetectorOptions } from './types';
-import PathDetector from './detectors/path';
-import CookieDetector from './detectors/cookie';
-import HtmlTagDetector from './detectors/htmlTag';
-import LocalStorageDetector from './detectors/localStorage';
-import NavigatorDetector from './detectors/navigator';
-import QueryStringDetector from './detectors/queryString';
-import SessionStorageDetector from './detectors/sessionStorage';
-import SubDomainDetector from './detectors/subDomain';
+import { pathDetector } from './detectors/path';
+import { cookieDetector } from './detectors/cookie';
+import { htmlTagDetector } from './detectors/htmlTag';
+import { localStorageDetector } from './detectors/localStorage';
+import { navigatorDetector } from './detectors/navigator';
+import { queryStringDetector } from './detectors/queryString';
+import { sessionStorageDetector } from './detectors/sessionStorage';
+import { subDomainDetector } from './detectors/subDomain';
 
 export const DEFAULT_OPTIONS: DetectorOptions = {
   lookupFromPathIndex: 0,
@@ -27,12 +27,12 @@ export const DEFAULT_OPTIONS: DetectorOptions = {
 };
 
 export const SUPPORTED_DETECTORS = {
-  [CookieDetector.name]: CookieDetector,
-  [HtmlTagDetector.name]: HtmlTagDetector,
-  [LocalStorageDetector.name]: LocalStorageDetector,
-  [NavigatorDetector.name]: NavigatorDetector,
-  [PathDetector.name]: PathDetector,
-  [QueryStringDetector.name]: QueryStringDetector,
-  [SessionStorageDetector.name]: SessionStorageDetector,
-  [SubDomainDetector.name]: SubDomainDetector,
+  [cookieDetector.name]: cookieDetector,
+  [htmlTagDetector.name]: htmlTagDetector,
+  [localStorageDetector.name]: localStorageDetector,
+  [navigatorDetector.name]: navigatorDetector,
+  [pathDetector.name]: pathDetector,
+  [queryStringDetector.name]: queryStringDetector,
+  [sessionStorageDetector.name]: sessionStorageDetector,
+  [subDomainDetector.name]: subDomainDetector,
 };

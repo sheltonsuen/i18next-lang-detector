@@ -1,7 +1,7 @@
 import { Detector } from '../types';
 import { isSessionStorageAvailable } from '../utils';
 
-const SessionStorageDetector: Detector = {
+export const sessionStorageDetector: Detector = {
   name: 'sessionStorage',
   lookup(options) {
     if (!isSessionStorageAvailable()) {
@@ -12,5 +12,3 @@ const SessionStorageDetector: Detector = {
     return lang ? lang : undefined;
   },
 };
-
-export default SessionStorageDetector;

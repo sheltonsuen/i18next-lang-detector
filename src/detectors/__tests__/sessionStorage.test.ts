@@ -1,5 +1,5 @@
 import { DetectorOptions } from '../../types';
-import SessionStorageDetector from '../sessionStorage';
+import { sessionStorageDetector } from '../sessionStorage';
 
 const DEFAULT_DETECTOR_OPTIONS: DetectorOptions = {
   lookupFromSubdomainIndex: 0,
@@ -15,5 +15,5 @@ const DEFAULT_DETECTOR_OPTIONS: DetectorOptions = {
 test('should return language when match', () => {
   window.sessionStorage.setItem('lang', 'en-AU');
 
-  expect(SessionStorageDetector.lookup(DEFAULT_DETECTOR_OPTIONS)).toBe('en-AU');
+  expect(sessionStorageDetector.lookup(DEFAULT_DETECTOR_OPTIONS)).toBe('en-AU');
 });

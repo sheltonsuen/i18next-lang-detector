@@ -1,5 +1,5 @@
 import { DetectorOptions } from '../../types';
-import CookieDetector from '../cookie';
+import { cookieDetector } from '../cookie';
 import Cookies from 'js-cookie';
 
 const DEFAULT_DETECTOR_OPTIONS: DetectorOptions = {
@@ -16,5 +16,5 @@ const DEFAULT_DETECTOR_OPTIONS: DetectorOptions = {
 test('should return lang when match', () => {
   Cookies.set('lang', 'zh-cn');
 
-  expect(CookieDetector.lookup(DEFAULT_DETECTOR_OPTIONS)).toBe('zh-cn');
+  expect(cookieDetector.lookup(DEFAULT_DETECTOR_OPTIONS)).toBe('zh-cn');
 });

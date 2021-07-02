@@ -1,4 +1,4 @@
-import LocalStorageDetector from '../localStorage';
+import { localStorageDetector } from '../localStorage';
 import { DetectorOptions } from '../../types';
 
 const DEFAULT_DETECTOR_OPTIONS: DetectorOptions = {
@@ -15,5 +15,5 @@ const DEFAULT_DETECTOR_OPTIONS: DetectorOptions = {
 test('should return language when match', () => {
   window.localStorage.setItem('i18nextLng', 'cn');
 
-  expect(LocalStorageDetector.lookup(DEFAULT_DETECTOR_OPTIONS)).toBe('cn');
+  expect(localStorageDetector.lookup(DEFAULT_DETECTOR_OPTIONS)).toBe('cn');
 });

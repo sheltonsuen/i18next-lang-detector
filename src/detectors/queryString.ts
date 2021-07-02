@@ -1,6 +1,6 @@
 import { Detector } from '../types';
 
-const QueryStringDetector: Detector = {
+export const queryStringDetector: Detector = {
   name: 'queryString',
   lookup(options) {
     if (!window) return;
@@ -15,5 +15,3 @@ const QueryStringDetector: Detector = {
     return langQuery?.value;
   },
 };
-
-export default QueryStringDetector;

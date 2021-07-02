@@ -1,6 +1,6 @@
 import { Detector } from '../types';
 
-const HtmlTagDetector: Detector = {
+export const htmlTagDetector: Detector = {
   name: 'htmlTag',
   lookup() {
     if (!document) return;
@@ -9,5 +9,3 @@ const HtmlTagDetector: Detector = {
     return lang ? lang : undefined;
   },
 };
-
-export default HtmlTagDetector;

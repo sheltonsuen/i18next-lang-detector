@@ -1,7 +1,7 @@
 import { Detector } from '../types';
 import { isLocalStorageAvailable } from '../utils';
 
-const LocalStorageDetector: Detector = {
+export const localStorageDetector: Detector = {
   name: 'localStorage',
   lookup(options) {
     if (!isLocalStorageAvailable()) {
@@ -12,5 +12,3 @@ const LocalStorageDetector: Detector = {
     return lang ? lang : undefined;
   },
 };
-
-export default LocalStorageDetector;

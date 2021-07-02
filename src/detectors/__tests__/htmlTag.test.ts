@@ -1,5 +1,5 @@
 import { DetectorOptions } from '../../types';
-import HtmlTagDetector from '../htmlTag';
+import { htmlTagDetector } from '../htmlTag';
 
 const DEFAULT_DETECTOR_OPTIONS: DetectorOptions = {
   lookupFromSubdomainIndex: 0,
@@ -15,5 +15,5 @@ const DEFAULT_DETECTOR_OPTIONS: DetectorOptions = {
 test('should return lang when match', () => {
   jest.spyOn(document.documentElement, 'getAttribute').mockReturnValue('en-UK');
 
-  expect(HtmlTagDetector.lookup(DEFAULT_DETECTOR_OPTIONS)).toBe('en-UK');
+  expect(htmlTagDetector.lookup(DEFAULT_DETECTOR_OPTIONS)).toBe('en-UK');
 });

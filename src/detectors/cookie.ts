@@ -1,7 +1,7 @@
 import { Detector } from '../types';
 import Cookies from 'js-cookie';
 
-const CookieDetector: Detector = {
+export const cookieDetector: Detector = {
   name: 'cookie',
   lookup(options) {
     if (!document) return;
@@ -9,5 +9,3 @@ const CookieDetector: Detector = {
     return Cookies.get(options.lookupCookie);
   },
 };
-
-export default CookieDetector;

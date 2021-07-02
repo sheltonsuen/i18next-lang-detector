@@ -2,7 +2,7 @@ import { Detector } from '../types';
 
 const LANG_PATH_SEGMENT = /\/([a-zA-Z-]*)/g;
 
-const PathDetector: Detector = {
+export const pathDetector: Detector = {
   name: 'path',
   lookup(options) {
     const langSegments = window?.location?.pathname?.match(LANG_PATH_SEGMENT);
@@ -14,5 +14,3 @@ const PathDetector: Detector = {
     return pathSegment?.replace('/', '');
   },
 };
-
-export default PathDetector;

@@ -1,4 +1,4 @@
-import path from '../path';
+import { pathDetector } from '../path';
 import { DetectorOptions } from '../../types';
 
 const DEFAULT_DETECTOR_OPTIONS: DetectorOptions = {
@@ -19,5 +19,5 @@ test('should return lang when match', () => {
     },
   });
 
-  expect(path.lookup(DEFAULT_DETECTOR_OPTIONS)).toBe('foo');
+  expect(pathDetector.lookup(DEFAULT_DETECTOR_OPTIONS)).toBe('foo');
 });
